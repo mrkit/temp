@@ -1,0 +1,47 @@
+{
+  "name": "simple_fractal_code_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack -p & node server",
+    "dev": "webpack -w & nodemon server --ignore public/",
+    "prettier": "prettier --single-quote --print-width=120 --parser=flow --tab-width=2 --write 'client/public/js/!(bundle).js' '{./, server, client}/**/*.{js,jsx}'",
+    "lint": "eslint **/*.{js,jsx} --quiet",
+    "test": "jest",
+    "test:update": "jest -u"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "jest-serializer-enzyme"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "csvtojson": "^1.1.9",
+    "enzyme": "^3.2.0",
+    "enzyme-to-json": "^3.0.0-beta6",
+    "eslint-loader": "^1.9.0",
+    "express": "^4.16.2",
+    "jest": "^22.0.1",
+    "jest-serializer-enzyme": "^1.0.0",
+    "morgan": "^1.9.0",
+    "pg": "^7.4.0",
+    "pg-hstore": "^2.3.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "sequelize": "^4.28.6",
+    "webpack": "^3.10.0"
+  }
+}
